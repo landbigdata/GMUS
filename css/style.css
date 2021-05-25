@@ -1,0 +1,297 @@
+
+@import url("mapbox.css");
+@import url("L.Control.Sidebar.css");
+@import url("easy-button.css");
+@import url("jquery-ui.min.css");
+
+/* --------------- body  ----------- */
+
+body {
+    line-height: 1.8;
+}
+
+#legend img {
+	max-width:100%;
+	max-height:100%;
+}
+
+#logo {
+  position: fixed;
+  font:bold 12px 'Helvetica Neue', Arial, Helvetica, sans-serif;
+  top: 0;
+  left: 0;
+  padding:5px;
+  margin: 10px;
+  width: 300px;
+  max-width: 50%;
+  z-index: 180;
+  background-color: white;
+  border-radius: 4px;
+  /*box-shadow: 0 1px 5px rgba(0,0,0,65);*/
+}
+
+#logo img {
+	max-width:100%;
+	max-height:100%;
+}
+
+/* --------------- features  ----------- */
+
+.btn-group {
+	float: left;
+	top: 10px;
+	left: 60px;
+}
+
+.icon {
+	margin-top: 3px;
+	margin-left: -4px;
+	padding: 0px;
+}
+
+.button {
+  float: left;
+  width: 31%;
+  text-align: center;
+  margin: 1%;
+  margin-bottom: 20px;
+}
+
+.leaflet-touch .leaflet-bar button {
+  width: 26px;
+  height: 26px;
+  line-height: 26px;
+}
+
+/* --------------- legend  ----------- */
+#legend {
+  font:bold 12px 'Helvetica Neue', Arial, Helvetica, sans-serif;
+  position: absolute;
+  border: 1px solid black;
+  border-radius: 3px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  background-color: white;
+  bottom: 150;
+  right: 0;
+  margin: 10px;
+  padding: 10px;
+  line-height: 15px;
+  width: 200px;
+  z-index: 200;
+  visibility: hidden;
+}
+
+#showLegend {
+  font:bold 12px 'Helvetica Neue', Arial, Helvetica, sans-serif;
+  position: absolute;
+  text-align: center;
+  cursor: pointer;
+  border: 1px solid black;
+  border-radius: 3px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  background-color: white;
+  bottom: 150;
+  right: 0;
+  margin: 10px;
+  padding: 10px;
+  line-height: 15px;
+  width: 60px;
+  z-index: 200;
+}
+
+#showLegend:hover {
+  background-color: #aeb6bf;
+
+}
+
+/* --------------- examples  ----------- */
+
+#showExamples {
+  font:bold 12px 'Helvetica Neue', Arial, Helvetica, sans-serif;
+  position: absolute;
+  text-align: center;
+  cursor: pointer;
+  border: 1px solid black;
+  border-radius: 3px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  background-color: white;
+  bottom: 0px;
+  left: 0;
+  margin: 20px;
+  padding: 5px;
+  line-height: 15px;
+  width: 160px;
+  z-index: 200;
+  visibility: hidden;
+}
+
+#showExamples:hover {
+  background-color: #aeb6bf;
+  top: 70px;
+  left: 0;
+}
+
+.legend-key {
+  display: inline-block;
+  border-radius: 20%;
+  width: 10px;
+  height: 10px;
+  margin-right: 5px;
+}
+
+.cB {
+  height: 15px;
+  width: 25px;
+  float:right;
+  position: absolute;
+  top: 10px;
+  right:0px;
+  display:inline-block;
+  padding:2px 5px;
+  border-bottom: 1px solid black;
+  border-left: 1px solid black;
+  background: url("../img/ar_down.png");
+}
+
+.cB:hover {
+  background: url("../img/ar_down_hover.png");
+  cursor: pointer;
+}
+
+.cE {
+  height: 15px;
+  width: 25px;
+  float:right;
+  position: absolute;
+  bottom: 70px;
+  right:0px;
+  display:inline-block;
+  padding:2px 5px;
+  border-bottom: 1px solid black;
+  border-left: 1px solid black;
+  background: url("../img/ar_down.png");
+}
+
+.cE:hover {
+  background: url("../img/ar_down_hover.png");
+  cursor: pointer;
+}
+
+
+/* --------------- divs  ----------- */
+
+.no-padding {
+  padding-right: 0px;
+  padding-left: 0px;
+}
+
+#title {
+	margin-top: 15px;
+}
+
+.infohidden {
+	position: fixed;
+	visibility: hidden;
+	font:12px 'Helvetica Neue', Arial, Helvetica, sans-serif;
+	top: 78px;
+	left: 48px;
+	padding:5px;
+	z-index: 180;
+	background-color: white;
+	border-radius: 4px;
+	box-shadow: 0 1px 5px rgba(0,0,0,65);
+}
+
+#hulogo {
+  position: fixed;
+  font:bold 12px 'Helvetica Neue', Arial, Helvetica, sans-serif;
+  top: 0;
+  right: 10px;
+  padding:5px;
+  margin: 10px;
+  z-index: 180;
+  background-color: white;
+  border-radius: 4px;
+  /*box-shadow: 0 1px 5px rgba(0,0,0,65);*/
+}
+
+/* --------------- map  ----------- */
+
+#mapper {
+/*  z-index: 0;*/
+  height: 100%;
+}
+
+#map {
+/*  z-index: 0;*/
+  height: 100%;
+  z-index: 150;
+}
+
+.map-overlay {
+    font:bold 12px 'Helvetica Neue', Arial, Helvetica, sans-serif;
+    position: absolute;
+    width: 6%;
+    min-width: 160px;
+    top: 0;
+    left: 35px;
+    padding: 12px;
+    z-index: 200;
+}
+
+.map-overlay-left {
+    font:bold 12px 'Helvetica Neue', Arial, Helvetica, sans-serif;
+	background-color: #fff;
+    position: absolute;
+    min-width: 160px;
+    bottom: 0px;
+	
+	box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+	border: 1px solid black;
+    border-radius: 3px;
+	overflow-y: auto;
+	overflow-x: hidden;
+    left: 0px;  
+	margin: 20px;
+    z-index: 200;
+}
+
+.map-overlay .map-overlay-inner {
+    background-color: #fff;
+    box-shadow:0 1px 2px rgba(0, 0, 0, 0.20);
+    border-radius: 3px;
+    padding: 6px;
+    margin-bottom: 10px;
+}
+
+.map-overlay-left .map-overlay-inner {
+    background-color: #fff;
+    border-radius: 3px;
+    padding: 6px;
+	line-height: 1.8;
+}
+
+.map-overlay-left .map-overlay-inner img {
+    padding-top: 2px;
+    padding-bottom: 2px;
+}
+
+.map-overlay-left .map-overlay-inner img:hover {
+	box-shadow:0px 0px 0px 10px black inset;
+	padding-top: 2px;
+    padding-bottom: 2px;
+}
+
+.map-overlay label {
+    display: block;
+    margin: 0 0 5px;
+}
+
+.map-overlay input {
+    background-color: transparent;
+    display: inline-block;
+    width: 100%;
+    position: relative;
+    margin: 0;
+    cursor: ew-resize;
+}
