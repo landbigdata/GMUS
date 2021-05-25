@@ -71,7 +71,7 @@ body {
   border-radius: 3px;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
   background-color: white;
-  bottom: 150;
+  bottom: 180;
   right: 0;
   margin: 10px;
   padding: 10px;
@@ -90,8 +90,8 @@ body {
   border-radius: 3px;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
   background-color: white;
-  bottom: 150;
-  right: 0;
+  bottom: 170px;
+  right: 0px;
   margin: 10px;
   padding: 10px;
   line-height: 15px;
@@ -105,19 +105,18 @@ body {
 }
 
 /* --------------- examples  ----------- */
-
 #showExamples {
   font:bold 12px 'Helvetica Neue', Arial, Helvetica, sans-serif;
   position: absolute;
   text-align: center;
   cursor: pointer;
   border: 1px solid black;
-  border-radius: 3px;
+  border-radius: 30px;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
   background-color: white;
-  bottom: 0px;
+  bottom: 0;
   left: 0;
-  margin: 20px;
+  margin: 15px;
   padding: 5px;
   line-height: 15px;
   width: 160px;
@@ -127,7 +126,7 @@ body {
 
 #showExamples:hover {
   background-color: #aeb6bf;
-  top: 70px;
+  top: 0;
   left: 0;
 }
 
