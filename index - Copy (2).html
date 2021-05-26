@@ -179,18 +179,14 @@ function zoomTo(arg) {
 			position: 'bottomright'}).addTo(map);
 
 
-       //添加鹰眼地图
-	var OSM_Map = new L.TileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-                //最小显示等级
-                minZoom: 2,
-                //最大显示等级
-                maxZoom: 8,
-                //设置地图不连续显示
-                noWrap: true
+       //Add eagle eye
+	var OSM_Map = new L.TileLayer('https://a.tile.openstreetmap.de/{z}/{x}/{y}.png', {
+                minZoom: 0,
+                maxZoom: 1,
             });
 
         var miniMap = new L.Control.MiniMap(OSM_Map, {
-                //鹰眼按钮是否显示
+                //Display eagle eye or not
                 toggleDisplay: true,
 		position: 'bottomleft'
             }).addTo(map);
@@ -212,7 +208,6 @@ function zoomTo(arg) {
 	document.getElementById("legend").style.visibility = 'visible';
 	document.getElementById("showLegend").style.visibility = 'hidden';
 	}
-
   </script>
 
 </body>
