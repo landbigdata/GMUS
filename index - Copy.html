@@ -45,15 +45,16 @@
   <script src="js/Control.MiniMap.js"></script>
 
 </head>
-
 <body>
 
   <div class="mapper no-padding">
       <div id="map" class="map">
+      	<div id="download_icon"><a href="#" onClick="alert('\n' + 'This dataset will be available upon acceptance of our manuscript!' + 
+							   '\n' + '\n' + 'For further information, please contact Mengmeng Li'+ '\n' + 'E-mail: mengmeng.li@vu.nl')";><img src="img/download_icon.png"></a></div>
 	    <div class="btn-group" style="z-index: 1001"> <!-- Use 401 to be between map and controls -->
 		</div>
 	  </div>
-        <div id="logo"><img src="img/logo.png"></div>
+      	<div id="logo"><img src="img/logo.png"></div>
     </div>
 
 <script>
@@ -71,10 +72,10 @@ function zoomTo(arg) {
 		map.setView([31.404762, 119.507523], 8)
 	}
 	if(arg == 'ex5') {
-		map.setView([6.702534, 3.128059], 7)
+		map.setView([23.951349, 90.261789], 7)
 	}
 	if(arg == 'ex6') {
-		map.setView([23.951349, 90.261789], 7)
+		map.setView([6.702534, 3.128059], 7)
 	}
 }
 </script>
@@ -82,12 +83,12 @@ function zoomTo(arg) {
 <div class='map-overlay-left' id="exmpl">
         <div class='map-overlay-inner'>
             <div><u>Zoom to examples:</u></br>
-				<img src="img/ex1.png" onclick="zoomTo('ex1')"><br>
-				<img src="img/ex2.png" onclick="zoomTo('ex2')"><br>		
-				<img src="img/ex3.png" onclick="zoomTo('ex3')"><br>
-				<img src="img/ex4.png" onclick="zoomTo('ex4')"><br>
-				<img src="img/ex5.png" onclick="zoomTo('ex5')"><br>
-				<img src="img/ex6.png" onclick="zoomTo('ex6')"><br>
+				<img src="img/ex1.png" onClick="zoomTo('ex1')"><br>
+				<img src="img/ex2.png" onClick="zoomTo('ex2')"><br>		
+				<img src="img/ex3.png" onClick="zoomTo('ex3')"><br>
+				<img src="img/ex4.png" onClick="zoomTo('ex4')"><br>
+				<img src="img/ex5.png" onClick="zoomTo('ex5')"><br>
+				<img src="img/ex6.png" onClick="zoomTo('ex6')"><br>
             </div>
         </div>
     </div>
@@ -101,7 +102,7 @@ function zoomTo(arg) {
     </div>
 
 
-  <script>
+<script>
         var dark_basemap= L.tileLayer('https://tile.jawg.io/jawg-dark/{z}/{x}/{y}.png?access-token=husKPovN2ju7MHnvcylZj55yt4MlLylmlIqugjh6M4i46rQzm9aJpLjxlnIvSadp', {
 	    		minZoom: 2,
             		maxZoom: 8,
@@ -208,6 +209,5 @@ function zoomTo(arg) {
 	document.getElementById("showLegend").style.visibility = 'hidden';
 	}
   </script>
-
 </body>
 </html>
