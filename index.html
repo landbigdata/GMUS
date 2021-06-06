@@ -1,15 +1,9 @@
-
 <html lang="en">
 <head>
   <title>Global Mapping of Urban Structure</title>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js"
-   integrity="sha512-GffPMF3RvMeYyc1LWMHtK8EbPv0iNZ8/oTtHPx9/cc2ILxQ+u905qIwdpULaqDkyBKgOaB57QTMg7ztg8Jm2Og=="
-   crossorigin=""></script>
-
-  <style type="text/css">
+    <style type="text/css">
     body {
        margin: 0;
        padding: 0;
@@ -18,27 +12,24 @@
        width: 100%;
        height: 100%;
     }
-  </style>
+    </style>
 
   <!-- Styles -->
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/leaflet.css">
+  <!--鹰眼控件样式-->
+  <link href="css/Control.MiniMap.css" rel="stylesheet" />
 
   <!-- Scripts -->
+  <script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js"></script>
   <script src="js/jquery.min.js"></script>
   <script src='js/mapbox.js'></script>
   <script src="js/easy-button.js"></script>
   <script src="js/leaflet.ajax.min.js"></script>
   <script src="js/styles.js"></script>
-
-
-  <!--鹰眼控件样式-->
-  <link href="css/Control.MiniMap.css" rel="stylesheet" />
-
   <!--leaflet原生库+Zondy库-->
   <script src="js/webclient-leaflet-framework.min.js"></script>
-
   <!--鹰眼控件扩展库-->
   <script src="js/Control.MiniMap.js"></script>
 
@@ -47,10 +38,9 @@
 
   <div class="mapper no-padding">
       <div id="map" class="map">
-      	<div id="download_icon"><a href="#" onClick="alert('\n' + 'Dear User,' + '\n' +
+      	<div id="download_icon"><a href="#" onClick="alert('\n' + 'Dear visitor,' + '\n' +
 							   '\n' + 'This dataset will be available upon acceptance of our manuscript! For further information, please contact us (mengmeng.li@vu.nl).' + '\n' +
 							   '\n' + 'Institute for Environmental Studies (IVM)' + '\n' + 'VU University Amsterdam, The Netherlands')";><img src="img/download_icon.png"></a></div>
-
 
 	<div id="homepage"><a href="https://landbigdata.github.io/cscproject/" target="_blank"><img src="img/homepage.png"></a></div>
 
