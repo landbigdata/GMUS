@@ -79,6 +79,18 @@ body {
 	border-radius: 3px;
 }
 
+#revolvermaps img {
+	position: relative;
+	float: right;
+	top: 138px;
+	left: -10;
+	z-index: 999;
+	width: 60;
+	height: 70;
+	border-radius: 3px;
+}
+
+
 .button {
   float: left;
   width: 31%;
