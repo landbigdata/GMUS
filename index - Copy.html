@@ -1,18 +1,9 @@
-
 <html lang="en">
 <head>
   <title>Global Mapping of Urban Structure</title>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css"
-   integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
-   crossorigin=""/>
-  <script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js"
-   integrity="sha512-GffPMF3RvMeYyc1LWMHtK8EbPv0iNZ8/oTtHPx9/cc2ILxQ+u905qIwdpULaqDkyBKgOaB57QTMg7ztg8Jm2Og=="
-   crossorigin=""></script>
-
-  <style type="text/css">
+    <style type="text/css">
     body {
        margin: 0;
        padding: 0;
@@ -21,38 +12,39 @@
        width: 100%;
        height: 100%;
     }
-  </style>
+    </style>
 
   <!-- Styles -->
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/leaflet.css">
+  <!--鹰眼控件样式-->
+  <link href="css/Control.MiniMap.css" rel="stylesheet" />
 
   <!-- Scripts -->
+  <script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js"></script>
   <script src="js/jquery.min.js"></script>
   <script src='js/mapbox.js'></script>
   <script src="js/easy-button.js"></script>
   <script src="js/leaflet.ajax.min.js"></script>
   <script src="js/styles.js"></script>
-
-
-  <!--鹰眼控件样式-->
-  <link href="css/Control.MiniMap.css" rel="stylesheet" />
-
   <!--leaflet原生库+Zondy库-->
   <script src="js/webclient-leaflet-framework.min.js"></script>
-
   <!--鹰眼控件扩展库-->
   <script src="js/Control.MiniMap.js"></script>
 
 </head>
 <body>
-
-  <div class="mapper no-padding">
+    <div class="mapper no-padding">
       <div id="map" class="map">
-      	<div id="download_icon"><a href="#" onClick="alert('\n' + 'This dataset will be available upon acceptance of our manuscript!' + '\n' +
-							   '(including model inputs and source code)' +
-							   '\n' + '\n' + 'For further information, please contact us'+ '\n' + 'E-mail: mengmeng.li@vu.nl' + '\n' +
+      	<div id="download_icon"><a href="#" onClick="alert('\n' + 'Dear visitor,' + '\n' +
+							   '\n' + 'This dataset will be available upon acceptance of our manuscript! For further information, please contact us (mengmeng.li@vu.nl).' + '\n' +
 							   '\n' + 'Institute for Environmental Studies (IVM)' + '\n' + 'VU University Amsterdam, The Netherlands')";><img src="img/download_icon.png"></a></div>
+
+	<div id="homepage"><a href="#"><img src="img/homepage.png"></a></div>
+
+	<div id="revolvermaps"><img src="https://rf.revolvermaps.com/w/3/s/a/0/33/0/ffffff/010020/aa0000/5u0yvc9fwb5.png"></div>
+
 	    <div class="btn-group" style="z-index: 1001"> <!-- Use 401 to be between map and controls -->
 		</div>
 	  </div>
@@ -102,7 +94,6 @@ function zoomTo(arg) {
     <div id="showLegend">
         Legend
     </div>
-
 
 <script>
         var dark_basemap= L.tileLayer('https://tile.jawg.io/jawg-dark/{z}/{x}/{y}.png?access-token=husKPovN2ju7MHnvcylZj55yt4MlLylmlIqugjh6M4i46rQzm9aJpLjxlnIvSadp', {
